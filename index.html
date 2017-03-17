@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Type Writer Effect</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="author" content="Mayank Pandey">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="typewriter.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            color: #505050;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+        }
+        .clear {
+            clear: both;
+        }
+        .bg_background {
+            background: #333;
+        }
+        .bg_gray {
+            background: #f7f7f7;
+        }
+        .mainWrapper {
+            width: 100%;
+            display: block;
+        }
+        .forHeading {
+            padding: 2%;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0px 5px 10px #999;
+            -webkit-box-shadow: 0px 5px 10px #999;
+            -ms-box-shadow: 0px 5px 10px #999;
+        }
+        .forHeading h1 {
+            font-family: 'News Cycle', sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .container {
+            width: 1170px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .childContainer {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 3px 10px #999;
+            -webkit-box-shadow: 0px 3px 10px #999;
+            -ms-box-shadow: 0px 3px 10px #999;
+        }
+        .childContainer h4 {
+            padding: 5px 0px;
+            /* background: #333; */
+            font-family: 'News Cycle', sans-serif;
+            color: #333;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            letter-spacing: 1px;
+        }
+        .childContainer p {
+            padding: 10px 0;
+        }
+        .childContainer p.tooltip {
+            padding-bottom: 30px;
+        }
+        .childContainer code {
+            color: #ff7e45;
+            padding: 2px 4px;
+            font-size: 90%;
+            background-color: #f9f2f4;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .childContainer code.section {
+            margin: 10px 0 0 0;
+        }
+        .childContainer h5 {
+            color: #fff;
+            padding: 3px 10px;
+            letter-spacing: 2px;
+        }
+        ul.explore {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            font-size: 13px;
+        }
+        ul.explore li {
+            display: block;
+            margin: 2px;
+            padding: 5px 5px;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $( "#demo" ).typewriter({
+                interval: 80,
+                color: "#ff0000",
+                fontSize: "18px"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="mainWrapper">
+        <div class="forHeading bg_background">
+            <h1>All About Type Writer Plugin</h1>
+        </div>
+
+        <div class="container">
+            <div class="childContainer ">
+                <h4>What is tooltip?</h4>
+                <p>
+                    The <code>tooltip</code> or <code>infotip</code> or a hint is a common graphical user interface element. It is used in conjunction with a cursor, usually a pointer. The user hovers the pointer over an item, without clicking it, and a tooltip may appear—a small "hover box" with information about the item being hovered over.
+                </p>
+            </div>
+            <div class="childContainer ">
+                <h4>Demo</h4>
+                <div id="demo">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="childContainer ">
+                <h4>How to configure?</h4>        
+                <p>
+                    You can configure all of its attributes by just passing its value at the time of initialization.
+                </p>
+            </div>
+            <div class=" childContainer">
+                <h5 class="bg_background">Initialization: </h5>
+                <pre>
+                    <p class="section">
+                        $( "div" ).typewriter();
+                    </p>   
+                </pre>
+
+                <h5 class="bg_background">Initialization with attributes: </h5>
+                <pre>
+                    <p class="section">
+                        $( "div" ).typewriter({
+                            interval: 80,
+                            color: "green",
+                            fontSize: "18px"
+                        }); 
+                    </p>
+                </pre>
+        </div>
+        <div class=" childContainer">
+            <ul class="explore">
+                <li><strong>interval</strong>: is the time interval to show each character. Its value is passed in microseconds like <code>80, 100</code></li>
+                <li><strong>color</strong>: is the color of the text. You can pass color using <code>Color Name like RED</code> or <code>HEX Value like #F0F8FF</code></li>
+                <li><strong>fontSize</strong>: is the font size of the text. You can pass any value like <code>12px, 14px etc</code></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
